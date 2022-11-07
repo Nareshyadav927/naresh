@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Login to server"
+ssh -i "practise.pem" ec2-user@ec2-44-206-255-33.compute-1.amazonaws.com "ps -ef;service https status;top -c; df -h"
+echo "Check for list of processes running in instance"
+echo "Check if httpd and tomcat are running or not"
+echo "CPU utilization of instance"
+echo "Disk space of instance"

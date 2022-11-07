@@ -1,0 +1,20 @@
+bash script on sanity check
+
+
+
+#!/bin/bash
+#steps to create script
+ssh -i<dns by using it>
+ps -ef
+systemctl status httpd
+systemctl status tomcat
+netstat -na
+top
+df -h
+#to list of out process by using above commands
+
+
+
+
+
+dns - domain net server

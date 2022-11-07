@@ -1,0 +1,247 @@
+Self Intro:
+===========
+Hi Myself  Naresh  working for techie horizon from last 4 years.
+Basically  I am from  hyderabad and have completed my graduation in 2014.
+I have been working from 4 years as DevOps engineer where I was responsible to manage
+the CICD Pipelines as well as worked on monitoring alerts.
+We are a team of 8 members 3 from onshore and 5 from offshore.
+I am a part of offshore team where working on rotational shifts.
+I make sure the environment is clean and the applications are accessible to the end users.
+I have worked on various devops tools like git,jenkins,maven,docker,ansible and 
+public cloud aws and physical data center.
+On aws i worked on various services like
+ECS
+ECR
+EC2
+Application load balancer
+ROute 53
+S3 buckets
+VPC
+CLoud watch and cloud formation.
+On physical machines our team support the patching activities where we work
+along with linux team for the pre patching and post patching activities.
+
+
+Project Details:
+===============
+
+Life Point U.s
+
+Lifepoint comes under healthcare domain.
+
+They have a very vast business in america.
+lifepoint client deals in all medical sectors in the america.
+
+they have there insurance policies which is covered by more than 50 % of population in america.
+
+we work for that client for the deployment of the applciation,we make sure that the application is always up and running.
+
+whenever there will be a new release in the application,we will be taking a window for deployment from client that depends upon SLA(service level agreement)
+made at the time of contract.
+
+we support there application to be hosted in tomcat severs in aws cloud.
+
+we make sure there are no problems facing by end user to access the application.
+As a devops engineer my role is to deploy the application.
+whenever there will be changes in code that changes will be pushed to github by developers.
+when all the code is developed then it will be merged to master branch and from github it will be triggered to jenkins,we configure webhooks in git for
+automatic triggering of code to jenkins.
+
+once code is triggered to jenkins and the commited code is verified by some test cases in jenkins.
+once this is done then we will build the jenkins job so that the code will be build and the war/jar file created will be pushed to nexus artifactory repository.
+
+once this is done then with the help of ansible play book this war/jar file will be pulled from nexus and deployed in tomcat in aws cloud servers.
+
+we will be maintainign jenkins pipelines,and a total of around aws 20 servers (t2.medium vcpu 2 cpu credits 24 memory 4 gb).
+
+all these servers are in autoscaling group which will be from min 20 - max 30 servers,so that whenever there will be high traffic then servers will scale up and down.
+
+i will be working on git like pushing the code to github.
+creating the branches if neccessary for developers.
+reverting the code if any changes made by developers where not deployed successfull.
+
+in jenkins managing the plugins,maintainign jenkins pipeline,maintainign jenkins job,runnign the jenkins job.
+
+In aws :creation of ec2 instances for developers as per need,maintainign s3 buckets,ebs volumes,taking backup of volumes,snapshots of instances,vpc,cidr blocks.
+
+have idea on cloudfont,loadbalancing,ssl and many other services in aws.
+Task 2:
+Interview Questions:
+====================
+DevOps:
+=======
+What is DevOps?
+Devops is a methodology which help to remove the gap between development and operations team.
+Implementation of devops will help us to track the bugs at initial stage and also release the applciation faster.
+
+What are the different stages of DevOps?
+Plan
+Code
+Build
+Test
+Release
+Operate
+monitor and 
+Feedback.
+
+What are the methodologies before DevOps?
+Waterfall model and agile process.
+
+Have you worked on Agile Process?
+Yes,where we have scrum master who will be assigning set of task for sprint.
+
+What is the Sprint duration?
+2 weeks.
+
+Difference between IAAS,PAAS and SAAS?
+
+SaaS (Software as a service) platforms involve software that is available via third-party over the Internet. 
+
+Examples of popular SaaS providers include: 
+
+BigCommerce.
+Google Workspace, Salesforce.
+Dropbox.
+MailChimp.
+ZenDesk.
+DocuSign.
+Slack.
+Hubspot.
+
+PaaS (Platform as a service) focuses primarily on hardware and software tools available over the internet. 
+
+Examples of popular PaaS providers include: 
+
+AWS Elastic Beanstalk.
+Heroku.
+Windows Azure (mainly used as PaaS).
+Force.com.
+Google App Engine.
+OpenShift.
+Apache Stratos.
+Adobe Magento Commerce Cloud.
+
+IaaS(Infrastructre as a service) works primarily with cloud-based and pay-as-you-go services such as storage, networking and virtualization.
+
+Examples of popular IaaS providers include: 
+
+AWS EC2.
+Rackspace.
+Google Compute Engine (GCE).
+Digital Ocean.
+Microsoft Azure.
+Magento 1 Enterprise Edition.
+
+Linux:
+=====
+Tell 10 linux commands?
+Netstat -na -- To check the running port numbers
+Ps -ef -- TO check the running services
+find / -name filename -- find a file
+grep keyword filename -- Find a keyword from a file
+mkdir -- to create the direcotry
+top -- cpu utilization
+sed -- to replace a text from file at run time
+kill -9 -- to kill the process
+touch filename -- to create zero byte size file
+tar -xvf filename.tar -- TO bundle a directory
+
+Command to check for the running ports?
+netstat -na | grep port_number
+
+Command to check the processes running?
+ps -ef
+
+Command to replace a word from file?
+sed -i 's/old-text/new-text/g' input.txt
+
+Examples for SED and AWK commands?
+awk example : https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
+Sed Example : https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/
+
+What is swap memory?
+When the actual memory of RAM is full then swap memory is used to process the request.
+
+Command to kill a process?
+kill -9 PID
+
+process to free disk space?
+When we see memory alert then follow the below steps:
+1)Login to the ec2 using ssh
+2) df -h -- shows the filesystems memory and check which filesystem is occupied with space example /var
+3) cd /var -- Change to var directory
+4) du -sk  -- TO check the each directory size in var
+5) Delete the directory / clear the sapce which has consumed more space.  
+
+What is Inode?
+An inode is an index node. It serves as a unique identifier for a specific piece of metadata on a given filesystem. 
+Each piece of metadata describes what we think of as a file.
+
+We have disk space available but still unable to create a file,what might be the reason?
+Basically an inode is used for each file on the filesystem. 
+So running out of inodes generally means we are unable to create file even if we have filesystem.
+
+Command to find a file and delete the file using the same command?
+find / -name "FILE-TO-FIND" -exec rm -rf {} \;
+
+Bash Scripting:
+==============
+#! in bash scripting means = Shebang
+
+Difference between bash and shell script?
+Shell scripting is a method to automate tasks as a collection of commands.
+Shell script can be execute on any shell.
+Example of shell scripting:
+#!/bin/sh
+myString="GeeksforGeeks"
+echo "myString: $myString"
+
+Bash: Bourne after shell.
+Bash scripting is a subset of shell scripting.
+Example of bash scripting:
+#!/bin/bash 
+myString="GeeksforGeeks"
+echo "myString: $myString"
+
+Write a bash script to check a directory in a location,and should dispaly the message if the directory is available?
+#!/bin/bash
+if [ -d "/path/to/dir" ] 
+then
+    echo "Directory /path/to/dir exists." 
+else
+    echo "Error: Directory /path/to/dir does not exists."
+fi
+
+Write a bash script to check if a service is running or not,if not running then script should start the service?
+#!/bin/bash
+service=replace_me_with_a_valid_service
+if (( $(ps -ef | grep -v grep | grep $service | wc -l) > 0 ))
+then
+echo "$service is running!!!"
+else
+/etc/init.d/$service start
+fi
+
+How to know whether the previous command has been executed successfully or not?
+With the help of exit status.
+If exit status is 0 then it has been successfully executed.
+If Exit status is 1 then it has not been successfully executed.
+$? is the exit status of the most recently-executed command.
+
+$# = Total number of command line arguments passed.
+
+$* = It's a space separated string of all arguments. For example, if $1 is "hello" and $2 is "world", then $* is "hello world".
+
+$@ = Stores all the arguments that were entered on the command line.
+
+$_ = special variable
+
+How to run bash script in the background?
+Use nohup to run the script in background.
+Example:
+sudo nohup ./hello_world.sh
+
+Which version of linux are you using?
+We can say RHEL 7.9 or amazon linux 
+Note: The versions will get changed as per time.
+Task3: Mug up all Linux commands

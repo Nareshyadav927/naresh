@@ -1,0 +1,10 @@
+sanity check on servers
+
+
+1. how to login to server       -   by using ssh -i command
+2.check of list of processes runnig in instance - by using ps -ef command
+3.check if httpd and tomcat are running or not -systemctl start httpd system status httpd
+                                               - systemctl start tomcat system staus tomcat	
+4.cpu utilization         -      using top command
+5.disc space of instance  -      free -m   ,  df -h
+											   
